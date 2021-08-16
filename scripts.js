@@ -7,7 +7,7 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-  }
+}
 
 function computerPlay () {
     let num = getRandomInt(0,2);
@@ -17,7 +17,7 @@ function computerPlay () {
 function playerPlay() {
     let input = prompt("Your move?", "Rock").toLowerCase();
 
-    if (moves.includes(input)) {
+    if (moves.includes(input)) { //Keep asking until valid input
         return input;
     } else {
         return playerPlay();
